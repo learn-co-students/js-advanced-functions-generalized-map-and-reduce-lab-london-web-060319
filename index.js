@@ -8,10 +8,10 @@ function map(sourceArray, callBackFcn) {
 }
 
 function reduce(sourceArray, callBackFcn, starting) {
-  let arr = (!!starting) ? starting : sourceArray[0]
+  let n = (!!starting) ? starting : sourceArray[0]
   let i = (!!starting) ? 0 : 1
   for (; i < sourceArray.length; i++) {
-    arr = callBackFcn(sourceArray[i], arr)
+    n = callBackFcn(sourceArray[i], n)
   }
-  return arr;
+  return n;
 }
